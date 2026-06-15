@@ -1,0 +1,27 @@
+[package]
+name = "ft991-rs"
+version = "0.1.0"
+edition = "2021"
+authors = ["Amateur Radio Developer"]
+license = "LGPL-2.1-or-later"
+description = "Rust driver for Yaesu FT-991 transceiver via CAT protocol"
+repository = "https://github.com/shvyac/ft991-rust"
+
+[dependencies]
+serialport = "4.2"
+tokio = { version = "1", features = ["full"] }
+thiserror = "1"
+log = "0.4"
+env_logger = "0.11"
+bytes = "1"
+
+[dev-dependencies]
+tokio-test = "0.4"
+
+[lib]
+name = "ft991_rs"
+path = "src/lib.rs"
+
+[[example]]
+name = "basic_control"
+path = "examples/basic_control.rs"
